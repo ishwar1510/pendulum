@@ -1,0 +1,28 @@
+.bar{
+    height: 200px;
+    width: 15px;
+    background-color: black;
+    position: relative;
+    left: 50%;
+    border-top: 5px solid white;
+    transform: translate(-50%);
+    transform: rotate(60deg);
+    transform-origin: top;
+    animation: rot 4s infinite linear;
+}
+
+.bar::before{
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: 99%;
+    transform: translateX(-50%);
+    content: '';
+}
+
+@keyframes rot{
+    50%{transform: rotate(-60deg);}
+}
